@@ -1,10 +1,11 @@
 import propTypes from "prop-types"
+import './style.scss'
 
 function Card({title, cover}) {
 
     return (
-        <div>
-             <img src={cover} alt="logement" height={80} width={80} />
+        <div className="card-item">
+             <img src={cover} alt="location"/>
              <h4>{title}</h4>
         </div>
     )

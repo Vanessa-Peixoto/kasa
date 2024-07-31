@@ -1,12 +1,11 @@
 import Card from "../../components/Card";
+import Banner from "../../components/Banner";
+import './style.scss'
+import imgBanner from '../../assets/images/img1.png'
 
 const fakeData = [
     {
-        title : 'Log1',
-        cover : "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-16-1.jpg"
-    },
-    {
-        title : 'Log2',
+        title : 'Charmant apt aux portes de Paris',
         cover : "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-16-1.jpg"
     },
 ]
@@ -14,15 +13,23 @@ const fakeData = [
 function Home() {
 
     return(
+
+        
         <div>
-            {fakeData.map((item, index) => (
-                <Card
-                    key={index}
-                    title={item.title}
-                    cover={item.cover}
-                />
-            ))}
+            <Banner imageUrl={imgBanner} opacity={0.7} title="Chez vous, partout et ailleurs"/>
+
+            <div className="container-card">
+                {fakeData.map((item, index) => (
+                    <Card
+                        key={index}
+                        title={item.title}
+                        cover={item.cover}
+                    />
+                ))}
+            </div>
+
         </div>
+            
     )
 }
 
