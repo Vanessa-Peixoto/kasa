@@ -2,31 +2,41 @@ import Card from "../../components/Card";
 import Banner from "../../components/Banner";
 import './style.scss'
 import imgBanner from '../../assets/images/img1.png'
+import { useState, useEffect } from "react";
 
-const fakeData = [
-    {
-        title : 'Charmant apt aux portes de Paris',
-        cover : "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-16-1.jpg"
-    },
-]
+
 
 function Home() {
+
+    const [data, setData] = useState(null)
+
+    useEffect(() => {
+        fetch('/data.json')
+            .then(response => response.json())
+            .then(data => setData(data))
+            .catch(error => console.error('Error fetching data:', error));
+    }, [])
+
+    if (!data) {
+        return <div>Loading...</div>
+    }
 
     return(
 
         
-        <div>
-            <Banner imageUrl={imgBanner} opacity={0.7} title="Chez vous, partout et ailleurs"/>
+        <div className="wrapper">
+            <Banner image={imgBanner} opacity={0.7} title="Chez vous, partout et ailleurs"/>
 
-            <div className="container-card">
-                {fakeData.map((item, index) => (
+            <section className="container-card">
+                {data.map(item => (
                     <Card
-                        key={index}
+                        key={item.id}
+                        id={item.id}
                         title={item.title}
                         cover={item.cover}
                     />
                 ))}
-            </div>
+            </section>
 
         </div>
             

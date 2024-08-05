@@ -1,0 +1,19 @@
+.rating-container {
+    display: flex;
+    align-items: center;
+
+    .star {
+        width: 24px; /* Ajustez la taille des étoiles selon vos besoins */
+        height: 24px; /* Ajustez la taille des étoiles selon vos besoins */
+        margin-right: 5px; /* Espace entre les étoiles */
+        background-color: gray; /* Couleur de fond des étoiles vides */
+        mask: url('../../assets/images/star.png') no-repeat center;
+        -webkit-mask: url('../../assets/images/star.png') no-repeat center;
+        mask-size: cover;
+        -webkit-mask-size: cover;
+
+        &.filled {
+            background-color: red; 
+        }
+    }
+}

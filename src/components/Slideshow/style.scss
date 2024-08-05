@@ -1,9 +1,10 @@
 .slideshow-container {
     position: relative;
     max-width: 100%;
+    height: 415px;
     margin: auto;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 25px;
 
     .slide-image {
         width: 100%;
@@ -16,14 +17,11 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
-        transform: translateY(-50%);
 
         .arrow {
-            width: 30px;
-            height: 30px;
+            width: 52px;
+            height: 80px;
             cursor: pointer;
-            user-select: none;
-            transition: transform 0.2s;
 
             &:hover {
                 transform: scale(1.2);
@@ -45,11 +43,8 @@
         position: absolute;
         bottom: 10px;
         left: 50%;
-        transform: translateX(-50%);
-        background: rgba(0, 0, 0, 0.5);
-        color: #fff;
+        color: white;
         padding: 5px 10px;
-        border-radius: 5px;
     }
 
     &.single-image .navigation,

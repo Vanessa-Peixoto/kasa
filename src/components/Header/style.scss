@@ -2,17 +2,24 @@
 header {
     display: flex;
     justify-content: space-between;
+    max-width: 1240px;
+    margin: auto;
+    margin-bottom: 3em;
 }
 
 nav {
     width: 15%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 
     a {
         text-decoration: none;
         color: black;
+
+        &.active {
+            border-bottom: 1px solid black;
+        }
     }
 }
 

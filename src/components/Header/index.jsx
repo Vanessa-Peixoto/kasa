@@ -1,8 +1,11 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import logo from '../../assets/images/logo.png'
 import './style.scss'
  
 function Header() {
+
+    const location = useLocation()
+
     return (
         <header>
             <div>
@@ -10,8 +13,8 @@ function Header() {
             </div>
             
             <nav>
-                <Link to="/">Accueil</Link>
-                <Link to="/apropos">A Propos</Link>
+            <Link to="/" className={location.pathname === '/' ? 'active' : ''}>Accueil</Link>
+            <Link to="/apropos" className={location.pathname === '/apropos' ? 'active' : ''}>A Propos</Link>
             </nav>
         </header>
     )
