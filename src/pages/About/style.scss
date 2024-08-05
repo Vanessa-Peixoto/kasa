@@ -1,0 +1,13 @@
+.wrapper {
+    max-width: 1240px;
+    margin: auto;
+
+    .container-collapse {
+        width: 84%;
+        margin: 50px auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 300px;
+    }
+}
