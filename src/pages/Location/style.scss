@@ -8,6 +8,7 @@
 
         h1 {
             color: #FF6060;
+            font-weight: 500;
         }
 
         @media screen and (max-width: 720px) {
@@ -17,7 +18,7 @@
 
     .tags-container {
         display: flex;
-        justify-content: space-between;
+        font-weight: 700;
 
         @media screen and (max-width: 720px) {
             justify-content: flex-start;
@@ -79,6 +80,12 @@
                 padding: 0;
             }
         }
+    }
+
+    .container-host {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     @media screen and (max-width: 720px) {
