@@ -13,6 +13,12 @@ nav {
     justify-content: space-between;
     align-items: center;
 
+    @media screen and (max-width: 720px) {
+        width: 40%;
+        text-transform: uppercase;
+        justify-content: space-around;
+    }
+
     a {
         text-decoration: none;
         color: black;

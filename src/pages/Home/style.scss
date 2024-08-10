@@ -12,4 +12,10 @@
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 50px;
+
+    @media screen and (max-width: 720px) {
+        background-color: white;
+        padding: 0;
+        
+    }
 }

@@ -53,14 +53,14 @@ function Location() {
                     </div>
                 </div>
 
-                <div>
+                <div className="container-host">
                     <div className="container-info-host">
                         <p>{location.host.name}</p>
                         <div className="image-cropper">
                             <img src={location.host.picture} alt="host" className="rounded"></img>
                         </div>
                     </div>
-                    <div>
+                    <div className="container-rating">
                         <Rating rating={location.rating} />
                     </div>
                 </div>
