@@ -1,17 +1,17 @@
-import { useParams, Navigate } from "react-router-dom"
+import { useParams, Navigate } from "react-router-dom";
 import { useState, useEffect } from 'react';
-import Slideshow from "../../components/Slideshow"
-import Collapse from '../../components/Collapse'
-import Tag from "../../components/Tag"
-import Rating from "../../components/Rating"
-import './style.scss'
+import Slideshow from "../../components/Slideshow";
+import Collapse from '../../components/Collapse';
+import Tag from "../../components/Tag";
+import Rating from "../../components/Rating";
+import './style.scss';
 
 
 function Location() {
 
     const { id } = useParams();
-    const [location, setLocation] = useState(null)
-    const [isNotFound, setIsNotFound] = useState(false)
+    const [location, setLocation] = useState(null);
+    const [isNotFound, setIsNotFound] = useState(false);
 
     useEffect(() => {
         fetch('/data.json')
@@ -28,17 +28,17 @@ function Location() {
                 console.error('Error fetching logement data:', error)
                 setIsNotFound(true)
             })
-    }, [id])
+    }, [id]);
 
     if (isNotFound) {
         return < Navigate to="/404" replace />
-    }
+    };
 
     if (!location) {
-        return <div>Loading...</div>;
-    }
+        return <div>Loading...</div>
+    };
 
-    return(
+    return (
         <div className="wrapper">
             <Slideshow images={location.pictures}/>
 
@@ -47,7 +47,7 @@ function Location() {
                     <h1>{location.title}</h1>
                     <p>{location.location}</p>
                     <div className="tags-container">
-                    {location.tags.map((tag, index) => (
+                        {location.tags.map((tag, index) => (
                         <Tag key={index} name={tag} />
                         ))}
                     </div>

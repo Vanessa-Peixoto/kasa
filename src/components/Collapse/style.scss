@@ -1,17 +1,18 @@
+@use '../../_style.scss' as *;
+
 .collapse-container {
     border-radius: 5px;
 
     .collapse-header {
-        background-color: #FF6060;
+        background-color: $primary-color;
         padding: 10px;
-        display: flex;
-        justify-content: space-between;
+        @include flex-space-between;
         align-items: center;
         cursor: pointer;
         border-radius: 5px;
 
         h2 {
-            color: white;
+            color: $secondary-color;
             margin: 0;
             font-size: 18px;
         }

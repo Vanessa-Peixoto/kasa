@@ -1,6 +1,7 @@
+@use '../../_style.scss' as *;
+
 .wrapper {
-    max-width: 1240px;
-    margin: auto;
+    @include wrap;
 
     .container-collapse {
         width: 84%;

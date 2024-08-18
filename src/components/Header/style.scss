@@ -1,16 +1,14 @@
+@use '../../_style.scss' as *;
 
 header {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1240px;
-    margin: auto;
+    @include flex-space-between;
+    @include wrap;
     margin-bottom: 3em;
 }
 
 nav {
     width: 15%;
-    display: flex;
-    justify-content: space-between;
+    @include flex-space-between;
     align-items: center;
     font-weight: 500;
 

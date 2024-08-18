@@ -1,9 +1,8 @@
-import propTypes from "prop-types"
-import './style.scss'
-import { Link } from "react-router-dom"
+import propTypes from "prop-types";
+import './style.scss';
+import { Link } from "react-router-dom";
 
 function Card({id, title, cover}) {
-
     return (
         <Link to={`/location/${id}`} className="card-link">
             <article className="card-item">
@@ -11,7 +10,7 @@ function Card({id, title, cover}) {
                 <h4>{title}</h4>
             </article>
         </Link>
-    )
+    );
 }
 
 Card.propTypes = {

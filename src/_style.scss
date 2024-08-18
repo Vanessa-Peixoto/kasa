@@ -1,0 +1,19 @@
+#root {
+    font-family: 'Montserrat', sans-serif;
+}
+
+// Colors
+$primary-color : #FF6060;
+$secondary-color: #FFFFFF;
+
+
+// Mixin
+@mixin wrap {
+    max-width: 1240px;
+    margin: auto;
+}
+
+@mixin flex-space-between {
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,9 +1,11 @@
-import { useState } from "react"
-import arrowUp from '../../assets/images/arrow-up.png'
-import arrowDown from '../../assets/images/arrow-down.png'
-import './style.scss'
+import { useState } from "react";
+import arrowUp from '../../assets/images/arrow-up.png';
+import arrowDown from '../../assets/images/arrow-down.png';
+import './style.scss';
+import propTypes from "prop-types";
 
-function Collapse({title, children}) {
+function Collapse({ title, children }) {
+
     const [isOpen, setIsOpen] = useState(false);
 
     const toggle = () => {
@@ -16,9 +18,15 @@ function Collapse({title, children}) {
                 <h2>{title}</h2>
                 <img src={isOpen ? arrowUp : arrowDown} alt="Toggle arrow" className="toggle-arrow" />
             </div>
+            {/* if isOpen is true : show content */}
             {isOpen && <div className="collapse-content">{children}</div>}
         </div>
-    )
+    );
+}
+
+Collapse.propTypes = {
+    title: propTypes.string,
+    children: propTypes.node,
 }
 
 export default Collapse

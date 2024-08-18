@@ -4,7 +4,7 @@ import leftArrow from '../../assets/images/arrow-left.png'
 import './style.scss'
 
 
-function Slideshow({images}) {
+function Slideshow({ images }) {
 
     const [currentIndex, setCurrentIndex] = useState(0)
 
@@ -27,7 +27,7 @@ function Slideshow({images}) {
             <div className="slideshow-container single-image">
                 <img src={images[0]} alt="Slide" className="slide-image" />
             </div>
-        )
+        );
     }
 
     return (

@@ -1,11 +1,13 @@
+@use '../../_style.scss' as *;
+
 span {
-    background-color: #FF6060;
+    background-color: $primary-color;
     border-radius: 10px;
     height: 25px;
     align-items: center;
     display: flex;
     justify-content: center;
-    color: white;
+    color: $secondary-color;
     padding: 5px;
     font-size: 14px;
     margin-right: 10px;

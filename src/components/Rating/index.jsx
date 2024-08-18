@@ -3,6 +3,7 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 import './style.scss'
 
 function Rating({ rating, totalStars = 5 }) {
+
     const stars = []
 
     for (let i = 0; i < totalStars; i++) {
@@ -14,11 +15,11 @@ function Rating({ rating, totalStars = 5 }) {
              />
             
         );
+    };
 
-
-    }
-
-    return <div className="rating-container">{stars}</div>
+    return (
+        <div className="rating-container">{stars}</div>
+    );
 }
 
 export default Rating;

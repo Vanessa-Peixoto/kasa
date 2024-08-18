@@ -1,6 +1,7 @@
+@use '../../_style.scss' as *;
+
 .wrapper {
-    max-width: 1240px;
-    margin: auto;
+    @include wrap;
 }  
 
 .container-card {
@@ -14,8 +15,7 @@
     padding: 50px;
 
     @media screen and (max-width: 720px) {
-        background-color: white;
+        background-color: $secondary-color;
         padding: 0;
-        
     }
 }
