@@ -4,6 +4,7 @@ import './style.scss'
  
 function Header() {
 
+    //get current url and handle navigation
     const location = useLocation()
 
     return (

@@ -9,15 +9,20 @@ function Slideshow({ images }) {
     const [currentIndex, setCurrentIndex] = useState(0)
 
     const previousSlide = () => {
+        //Calculate index of the last image
         const lastIndex = images.length - 1
+        //Check if currentIndex is the first image
         const resetIndex = currentIndex === 0
+        //if resetIndex is true, index is set to lastIndex and we return to last image of slider
         const index = resetIndex ? lastIndex : currentIndex - 1
+        //Update with new value
         setCurrentIndex(index)
     }
 
     const nextSlide = () => {
         const lastIndex = images.length - 1
         const resetIndex = currentIndex === lastIndex
+        //if resetIndex is true, index is set to first image of slider
         const index = resetIndex ? 0 : currentIndex + 1
         setCurrentIndex(index)
     }

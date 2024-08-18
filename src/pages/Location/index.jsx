@@ -9,6 +9,7 @@ import './style.scss';
 
 function Location() {
 
+    //Get id from URL
     const { id } = useParams();
     const [location, setLocation] = useState(null);
     const [isNotFound, setIsNotFound] = useState(false);
@@ -17,6 +18,7 @@ function Location() {
         fetch('/data.json')
             .then(response => response.json())
             .then(data => {
+                //check if id and data is matching
                 const foundLocation = data.find(location => location.id === id)
                 if(foundLocation) {
                     setLocation(foundLocation)
@@ -30,6 +32,7 @@ function Location() {
             })
     }, [id]);
 
+    //if location is not found, redirect to 404
     if (isNotFound) {
         return < Navigate to="/404" replace />
     };
